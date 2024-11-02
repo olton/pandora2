@@ -1,0 +1,24 @@
+:root {
+    --reserve-bronse-color: #6b4b19;
+    --reserve-sand-color: #efdbb2;
+    --reserve-steppe-color: rgb(226, 223, 204);
+    --reserve-navview-pane: rgb(248, 246, 237);
+    --reserve-olive-color: #332f21;
+    --reserve-olive-color-lighten: #91895d;
+
+    --appbar-item-background-hover: var(--reserve-olive-color);
+    --appbar-item-color-hover: #fff;
+}
+
+.bg-reserve-olive {
+    background-color: var(--reserve-olive-color);
+    color: #fff;
+}
+.bg-reserve-steppe {
+    background-color: var(--reserve-steppe-color);
+    color: #333;
+}
+.bg-reserve-sand {
+    background-color: var(--reserve-sand-color);
+    color: #333;
+}

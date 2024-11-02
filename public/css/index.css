@@ -1,0 +1,47 @@
+:root {
+    --logo-background: #f6f6f6;
+    --logo-color: #292826;
+}
+
+.dark-side {
+    --logo-background: #2c2d30;
+    --logo-color: #faf5f5;
+}
+
+.logo-container {
+    background: var(--logo-background);
+    color: var(--logo-color);
+    display: flex;
+    align-items: center;
+    height: 52px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navview {
+    &.compacted {
+        .text-logo {
+            display: none!important;
+        }
+    }
+
+    #side-menu {
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    &.compacted {
+        #side-menu {
+            width: calc(100% + 16px);
+        }
+    }
+
+    .navview-content {
+    }
+
+    .navview-content-inner {
+        padding: 70px 2rem 2rem 2rem;
+    }
+}

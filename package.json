@@ -1,0 +1,36 @@
+{
+  "name": "pandora",
+  "version": "2.0.0",
+  "description": "Template set built with Metro UI",
+  "type": "module",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+  "author": {
+    "email": "serhii@pimenov.com.ua",
+    "name": "Serhii Pimenov",
+    "site": "https://pimenov.com.ua"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "build": "cross-env MODE=development node metro/build.js",
+    "watch": "cross-env MODE=development node metro/watch.js",
+    "build:prod": "cross-env MODE=production node metro/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "devDependencies": {
+    "@olton/esbuild-plugin-autoprefixer": "^0.2.0",
+    "@olton/esbuild-plugin-progress": "^0.3.0",
+    "@olton/metroui": "^5.0.12",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-less": "^1.3.10",
+    "less": "^4.2.0",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@fastify/static": "^8.0.2",
+    "fastify": "^5.0.0"
+  }
+}
