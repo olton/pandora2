@@ -14,26 +14,26 @@
 
 <div class="row" style="--grid-gutter: 2rem">
     <div class="cell-md-4">
-        <div class="info-box4">
+        <div class="info-box2">
             <div class="title">version</div>
-            <div class="value">
+            <div class="value mono">
                 <span class="primary-value">d800da8...522b358</span>
                 <span class="secondary-value">mina:mainnet</span>
             </div>
         </div>
     </div>
     <div class="cell-md-4">
-        <div class="info-box4">
+        <div class="info-box2">
             <div class="title">GENESIS TIMESTAMP</div>
-            <div class="value">
-                <span class="primary-value">05, Jun 2024 04:00</span>
+            <div class="value mono">
+                <span class="primary-value" data-role="eval">{{ datetime().format("DD, MMM YYYY HH:mm") }}</span>
             </div>
         </div>
     </div>
     <div class="cell-md-4">
-        <div class="info-box4">
+        <div class="info-box2">
             <div class="title">hard fork block</div>
-            <div class="value">
+            <div class="value mono">
                 <span class="primary-value">359 605</span>
                 <span class="secondary-value">05, Jun 2024 04:00</span>
             </div>
@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="cell-md-4">
-        <div class="icon-box border bd-red">
+        <div class="icon-box bd-red">
             <div class="icon bg-red fg-white"><span class="mif-thumbs-up"></span></div>
             <div class="content">
                 <div class="title">likes</div>
@@ -61,8 +61,8 @@
         </div>
     </div>
     <div class="cell-md-4">
-        <div class="icon-box border bd-green">
-            <div class="icon bg-green fg-white"><span class="mif-cart"></span></div>
+        <div class="icon-box">
+            <div class="icon"><span class="mif-shop"></span></div>
             <div class="content">
                 <div class="title">sales</div>
                 <div class="value">1024</div>
@@ -79,7 +79,7 @@
                 <div class="title">New Orders</div>
             </div>
             <div class="icon">
-                <span class="mif-cart"></span>
+                <span class="mif-add-shopping-cart"></span>
             </div>
             <a href="#" class="more"> More info <span class="ml-2 mif-arrow-right"></span></a>
         </div>
@@ -90,8 +90,8 @@
                 <div class="value">53%</div>
                 <div class="title">Bounce Rate</div>
             </div>
-            <div class="icon">
-                <span class="mif-chart-bars"></span>
+            <div class="icon fg-violet">
+                <span class="mif-bar-chart"></span>
             </div>
             <a href="#" class="more bg-violet fg-white"> More info <span class="ml-2 mif-arrow-right"></span></a>
         </div>
@@ -103,7 +103,7 @@
                 <div class="title">New Registrations</div>
             </div>
             <div class="icon">
-                <span class="mif-user-plus"></span>
+                <span class="mif-person_add"></span>
             </div>
             <a href="#" class="more"> More info <span class="ml-2 mif-arrow-right"></span></a>
         </div>
@@ -114,7 +114,7 @@
 <div class="row" style="--grid-gutter: 2rem">
     <div class="cell-md-4">
         <div class="icon-box2 gr-light-emerald">
-            <div class="icon bg-emerald fg-white"><span class="mif-users"></span></div>
+            <div class="icon bg-emerald fg-white"><span class="mif-group"></span></div>
             <div class="content">
                 <div class="title">Total Users</div>
                 <div class="value">20,000</div>
@@ -141,8 +141,8 @@
     </div>
 
     <div class="cell-md-4">
-        <div class="icon-box2 gr-light-coral">
-            <div class="icon bg-coral fg-white"><span class="mif-google-wallet"></span></div>
+        <div class="icon-box2">
+            <div class="icon"><span class="mif-wallet"></span></div>
             <div class="content">
                 <div class="title">Total Income</div>
                 <div class="value">$42,000</div>
@@ -158,7 +158,7 @@
 <div class="row" style="--grid-gutter: 2rem">
     <div class="cell-md-4">
         <div class="icon-box3">
-            <div class="icon bg-emerald fg-white"><span class="mif-users"></span></div>
+            <div class="icon bg-emerald fg-white"><span class="mif-dollar"></span></div>
             <div class="content">
                 <div class="value">$20,000</div>
                 <div class="title">Income Status</div>
@@ -184,13 +184,43 @@
 
     <div class="cell-md-4">
         <div class="icon-box3">
-            <div class="icon bg-coral fg-white"><span class="mif-google-wallet"></span></div>
+            <div class="icon"><span class="mif-wallet"></span></div>
             <div class="content">
                 <div class="title">Total Income</div>
                 <div class="value">$42,000</div>
                 <div class="subtitle">
-                    <div data-role="progress" data-value="75" data-small="true" data-show-label="true" data-show-value="true" data-cls-bar="bg-coral"></div>
+                    <div data-role="progress" data-value="75" data-small="true" data-show-label="true" data-show-value="true"></div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="--grid-gutter: 2rem">
+    <div class="cell-md-4">
+        <div class="icon-box4">
+            <div class="icon"><img src="/images/alex.png" alt=""/></div>
+            <div class="content">
+                <div class="value">Alex Surikatt</div>
+                <div class="title">CEO</div>
+            </div>
+        </div>
+    </div>
+    <div class="cell-md-4">
+        <div class="icon-box4">
+            <div class="icon"><img src="/images/igor.png" alt=""/></div>
+            <div class="content">
+                <div class="value">Igor Taran</div>
+                <div class="title">Admin User</div>
+            </div>
+        </div>
+    </div>
+    <div class="cell-md-4">
+        <div class="icon-box4">
+            <div class="icon"><span class="mif-account_circle fg-gray"></span></div>
+            <div class="content">
+                <div class="value">Open Vacancy</div>
+                <div class="title">Manager</div>
             </div>
         </div>
     </div>

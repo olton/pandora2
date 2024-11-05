@@ -1,30 +1,62 @@
 class App {
     currentPage = "";
 
-    constructor(page) {
-        this.currentPage = page;
-        this.loadPage().then(() => {});
-        this.eventHandler();
+    constructor() {
+        const hash = location.hash;
+        const target = hash.length > 0 ? hash.substring(1) : "dashboard";
+
+        this.sidebar = $("#side-menu");
+        this.content = $("#page-content");
+        this.currentPage = target
+        this.loadPage().then(() => {})
+        this.eventHandler()
+        this.initSidebar()
+    }
+
+    initSidebar(){
+        this.sidebar.find(".active").removeClass("active");
+
+        const anchor = this.sidebar.find(`a[href='#${this.currentPage}']`)
+        const link = anchor.parent()
+        const parent_menu = anchor.closest("ul[data-role=dropdown]")
+        link.addClass("active");
+        if (parent_menu.length > 0) {
+            Metro.getPlugin(parent_menu, "dropdown").open();
+        }
     }
 
     async loadPage(){
         const component = `/pages/${this.currentPage}/index.html`;
         const content = await fetch(component).then(response => response.text());
-        $("#page-content").html(content);
+        this.content.html(content);
         if (window["PAGE_TITLE"]) {
             this.setPageTitle(window["PAGE_TITLE"]);
         }
+        Metro.utils.cleanPreCode("pre code");
+        hljs.highlightAll();
     }
 
     eventHandler(){
         const that = this;
-        $('#side-menu').on('click', 'a', function(e) {
-            that.currentPage = $(this).attr('href').substring(1);
-            that.loadPage().then(() => {});
-            window.history.pushState(null, null, "/#"+that.currentPage);
+        this.sidebar.on('click', 'a', function(e) {
+            const anchor = $(this);
+            const href = anchor.attr('href');
+            const li = anchor.parent();
+
+            if (href.startsWith("#")) {
+                that.sidebar.find(".active").removeClass("active");
+                li.addClass("active");
+                that.currentPage = href.substring(1);
+                that.loadPage().then(() => {});
+                window.history.pushState(null, null, "/#"+that.currentPage);
+                e.preventDefault();
+                e.stopPropagation();
+            } else {
+                window.location.href = href;
+            }
         })
 
-        $(window).on('popstate', function(e) {
+        $(window).on('popstate', function() {
             that.currentPage = location.hash.substring(1);
             that.loadPage().then(() => {});
         })
@@ -37,7 +69,7 @@ class App {
     }
 }
 
-const hash = location.hash;
-const target = hash.length > 0 ? hash.substring(1) : "dashboard";
+$(function(){
+    new App();
+})
 
-var app = new App(target);

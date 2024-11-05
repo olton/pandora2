@@ -1,0 +1,190 @@
+<script>window.PAGE_TITLE = 'Grid System'</script>
+<style>
+    .grid.demo {
+        margin: 20px 0;
+        [class*="cell-"] {
+            height: 40px;
+            background: var(--default-background);
+            color: var(--default-color);
+            border: 1px solid var(--color-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    }
+
+    .dark-side {
+        .grid.demo {
+            [class*="cell-"] {
+                background: var(--default-background);
+                color: var(--default-color);
+                border: 1px solid var(--border-color);
+            }
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h3>Grid System</h3>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-end flex-align-center">
+        <ul class="breadcrumbs arrow">
+            <li><a href="#">Pandora 2.0</a></li>
+            <li class="active"><a href="#">Grid System</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="title">About Grid System</div>
+    <p class="text-muted">
+        You can create a grid with built-in grid system.
+        The grid system uses a series of containers, rows, and columns to layout and align content.
+        It’s built with flexbox and is fully responsive. The following css classes are available for building a grid:
+        <code>.grid</code>,
+        <code>.row</code>,
+        <code>.cell-*</code>,
+        <code>.cell-*-*</code>,
+        <code>.cell-*-half</code>,
+        <code>.cell-*-one-third</code>,
+        <code>.cell-*-two-third</code>,
+        <code>.cell-*-one-fifth</code>,
+        <code>.cell-*-two-fifth</code>,
+        <code>.cell-*-three-fifth</code>,
+        <code>.cell-*-four-fifth</code>,
+        <code>.offset-*</code>,
+        and <code>.offset-*-*</code>.
+    </p>
+
+    <div class="mt-4 table-scrollable">
+        <table class="table striped border bd-default cell-border">
+            <thead>
+            <tr>
+                <th></th>
+                <th class="text-center">Super small<br><small>&lt;360px</small></th>
+                <th class="text-center">Extra small<br><small>≥360px</small></th>
+                <th class="text-center">Small<br><small>≥576px</small></th>
+                <th class="text-center">Extra Medium<br><small>≥640px</small></th>
+                <th class="text-center">Medium<br><small>≥768px</small></th>
+                <th class="text-center">Large<br><small>≥992px</small></th>
+                <th class="text-center">Extra large<br><small>≥1200px</small></th>
+                <th class="text-center">XX large<br><small>≥1400px</small></th>
+                <th class="text-center">XXX large<br><small>≥2000px</small></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th class="text-nowrap" scope="row">Class prefix</th>
+                <td><code>.col-fs-*</code></td>
+                <td><code>.col-xs-*</code></td>
+                <td><code>.col-sm-*</code></td>
+                <td><code>.col-ld-*</code></td>
+                <td><code>.col-md-*</code></td>
+                <td><code>.col-lg-*</code></td>
+                <td><code>.col-xl-*</code></td>
+                <td><code>.col-xxl-*</code></td>
+                <td><code>.col-xxxl-*</code></td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row"># of columns</th>
+                <td colspan="9">12</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">Gutter width</th>
+                <td colspan="9">16px</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">Custom gutters</th>
+                <td colspan="9">Yes, with CSS variable</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">Nestable</th>
+                <td colspan="9">Yes, .row > .row > ...</td>
+            </tr>
+            <tr>
+                <th class="text-nowrap" scope="row">Column ordering</th>
+                <td colspan="9">Yes, with classes <code>order-*-*</code></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="box">
+    <div class="title">Grid Gutter Size</div>
+    <p class="text-muted">
+        Grid System used <code>--grid-gutter</code> variable to set gutter width.
+        To set gutter width to <code>10px</code>, you can use the following code:
+    </p>
+    <div class="mt-2 text-bold">Global setup:</div>
+    <pre><code class="language-css">
+        :root {
+            --grid-gutter: 10px;
+        }
+    </code></pre>
+
+    <div class="mt-2 text-bold">Local setup:</div>
+    <pre><code class="language-html">
+        &lt;row style="--grid-gutter: 10px;"&gt;
+            ...
+        &lt;/row&gt;
+    </code></pre>
+</div>
+
+<div class="box">
+    <div class="title">Grid Code</div>
+    <pre><code class="language-html">
+        &lt;div class="grid"&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="cell-md-1"&gt;&lt;/div&gt;
+                &lt;div class="cell-md-3"&gt;&lt;/div&gt;
+                &lt;div class="cell-md-8"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code></pre>
+</div>
+
+<div class="box">
+    <div class="title">Grid Example</div>
+
+    <div class="grid demo">
+        <div class="row">
+            <div class="cell-md-1">cell-*-1</div>
+            <div class="cell-md-11">cell-*-11</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-2">cell-*-2</div>
+            <div class="cell-md-10">cell-*-10</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-3">cell-*-3</div>
+            <div class="cell-md-9">cell-*-9</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-4">cell-*-4</div>
+            <div class="cell-md-8">cell-*-8</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-5">cell-*-5</div>
+            <div class="cell-md-7">cell-*-7</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-6">cell-*-6</div>
+            <div class="cell-md-6">cell-*-6</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-one-third">cell-*-one-third</div>
+            <div class="cell-md-two-third">cell-*-two-third</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-one-fifth">cell-*-one-fifth</div>
+            <div class="cell-md-two-fifth">cell-*-two-fifth</div>
+            <div class="cell-md-two-fifth">cell-*-two-fifth</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-12">cell-*-12</div>
+        </div>
+    </div>
+</div>

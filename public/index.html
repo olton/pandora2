@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pandora 2.0 - The template set built with Metro UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="/metroui/metro.css" />
     <link rel="stylesheet" href="/css/index.css" />
 
@@ -38,149 +39,301 @@
                 </button>
             </div>
 
-            <ul class="navview-menu" id="side-menu">
-                <li class="item-header">General</li>
-                <li id="li-dashboard">
+            <ul class="navview-menu pad-second-level" id="side-menu">
+                <li class="item-header">Elements</li>
+                <li>
                     <a href="#dashboard">
-                        <span class="icon"><span class="mif-roofing"></span></span>
+                        <span class="icon"><span class="mif-developer_board"></span></span>
                         <span class="caption">Dashboard</span>
                     </a>
                 </li>
-                <li id="li-widgets">
-                    <a href="#widgets">
-                        <span class="icon"><span class="mif-build"></span></span>
-                        <span class="caption">Widgets</span>
+                <li>
+                    <a href="#grid">
+                        <span class="icon"><span class="mif-apps"></span></span>
+                        <span class="caption">Grid</span>
                     </a>
                 </li>
-                <li id="li-tables">
-                    <a href="#tables">
-                        <span class="icon"><span class="mif-table"></span></span>
-                        <span class="caption">Tables</span>
-                    </a>
-                </li>
-                <li id="li-ui-elements">
-                    <a href="#ui-elements">
-                        <span class="icon"><span class="mif-group-by-ref"></span></span>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <span class="icon"><span class="mif-group-by"></span></span>
                         <span class="caption">UI Elements</span>
                     </a>
+                    <ul class="navview-menu ignore-document-click" data-role="dropdown">
+                        <li>
+                            <a href="#buttons">
+                                <span class="icon"><span class="mif-button"></span></span>
+                                <span class="caption">Buttons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#special-buttons">
+                                <span class="icon"><span class="mif-special-button-2"></span></span>
+                                <span class="caption">Special Buttons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#progress">
+                                <span class="icon"><span class="mif-progress"></span></span>
+                                <span class="caption">Progress &amp; Activities</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tables">
+                                <span class="icon"><span class="mif-table"></span></span>
+                                <span class="caption">Tables</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tiles">
+                                <span class="icon"><span class="mif-widgets"></span></span>
+                                <span class="caption">Tiles</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tabs">
+                                <span class="icon"><span class="mif-tabs"></span></span>
+                                <span class="caption">Tabs &amp; PageControl</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#navview">
+                                <span class="icon"><span class="mif-list_bulleted"></span></span>
+                                <span class="caption">NavView &amp; ListView</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#treeview">
+                                <span class="icon"><span class="mif-tree"></span></span>
+                                <span class="caption">TreeView</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#datetime">
+                                <span class="icon"><span class="mif-calendar"></span></span>
+                                <span class="caption">Date &amp; Time</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#windows">
+                                <span class="icon"><span class="mif-window"></span></span>
+                                <span class="caption">Windows</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#cards">
+                                <span class="icon"><span class="mif-person-card"></span></span>
+                                <span class="caption">Cards</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li id="li-form-elements">
-                    <a href="#form-elements">
-                        <span class="icon"><span class="mif-insert-template"></span></span>
-                        <span class="caption">Form Elements</span>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <span class="icon"><span class="mif-format_shapes"></span></span>
+                        <span class="caption">Forms</span>
                     </a>
+                    <ul class="navview-menu ignore-document-click" data-role="dropdown">
+                        <li>
+                            <a href="#form-elements">
+                                <span class="icon"><span class="mif-insert-template"></span></span>
+                                <span class="caption">Form Elements</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#form-layouts">
+                                <span class="icon"><span class="mif-layout"></span></span>
+                                <span class="caption">Layouts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#form-validating">
+                                <span class="icon"><span class="mif-spell-check"></span></span>
+                                <span class="caption">Validating</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-
-                <li class="item-header">Information</li>
-                <li id="li-windows">
-                    <a href="#windows">
-                        <span class="icon"><span class="mif-windows"></span></span>
-                        <span class="caption">Windows</span>
-                    </a>
-                </li>
-                <li id="li-dialogs">
-                    <a href="#dialogs">
-                        <span class="icon"><span class="mif-dynamic_feed"></span></span>
-                        <span class="caption">Dialogs</span>
-                    </a>
-                </li>
-                <li id="li-infobox">
-                    <a href="#infobox">
-                        <span class="icon"><span class="mif-info_outline"></span></span>
-                        <span class="caption">Info Boxes</span>
-                    </a>
-                </li>
-                <li id="li-hints">
-                    <a href="#hints">
-                        <span class="icon"><span class="mif-mark_chat_unread"></span></span>
-                        <span class="caption">Hints &amp; Popovers</span>
-                    </a>
-                </li>
-                <li id="li-notify">
-                    <a href="#notify">
-                        <span class="icon"><span class="mif-notifications"></span></span>
-                        <span class="caption">Toast &amp; Notifies</span>
-                    </a>
-                </li>
-
-                <li class="item-header">Navigation</li>
-                <li id="li-appbar">
-                    <a href="#appbar">
-                        <span class="icon"><span class="mif-apps"></span></span>
-                        <span class="caption">Appbar</span>
-                    </a>
-                </li>
-                <li id="li-ribbon-menu">
-                    <a href="#ribbon-menu">
-                        <span class="icon"><span class="mif-dashboard"></span></span>
-                        <span class="caption">Ribbon Menu</span>
-                    </a>
-                </li>
-                <li id="li-menus">
-                    <a href="#menus">
+                <li>
+                    <a href="#" class="dropdown-toggle">
                         <span class="icon"><span class="mif-menu_open"></span></span>
-                        <span class="caption">Menus &amp; Sidebars</span>
+                        <span class="caption">Navigation</span>
                     </a>
+                    <ul class="navview-menu ignore-document-click" data-role="dropdown">
+                        <li>
+                            <a href="#appbar">
+                                <span class="icon"><span class="mif-apps"></span></span>
+                                <span class="caption">Appbar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#ribbon-menu">
+                                <span class="icon"><span class="mif-dashboard"></span></span>
+                                <span class="caption">Ribbon Menu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#menus">
+                                <span class="icon"><span class="mif-menu_open"></span></span>
+                                <span class="caption">Menus &amp; Sidebars</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <span class="icon"><span class="mif-info"></span></span>
+                        <span class="caption">Information</span>
+                    </a>
+                    <ul class="navview-menu ignore-document-click" data-role="dropdown">
+                        <li>
+                            <a href="#dialogs">
+                                <span class="icon"><span class="mif-dynamic_feed"></span></span>
+                                <span class="caption">Dialogs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#infobox">
+                                <span class="icon"><span class="mif-inbox"></span></span>
+                                <span class="caption">Info Boxes</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hints">
+                                <span class="icon"><span class="mif-mark_chat_unread"></span></span>
+                                <span class="caption">Hints &amp; Popovers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#notify">
+                                <span class="icon"><span class="mif-notifications"></span></span>
+                                <span class="caption">Toast &amp; Notifies</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <span class="icon"><span class="mif-style"></span></span>
+                        <span class="caption">Common CSS</span>
+                    </a>
+                    <ul class="navview-menu ignore-document-click" data-role="dropdown">
+                        <li>
+                            <a href="#typography">
+                                <span class="icon"><span class="mif-format_size"></span></span>
+                                <span class="caption">Typography</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#colors">
+                                <span class="icon"><span class="mif-format_paint"></span></span>
+                                <span class="caption">Colors</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#flexbox">
+                                <span class="icon"><span class="mif-layers"></span></span>
+                                <span class="caption">FlexBox</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#spacing-and-sizing">
+                                <span class="icon"><span class="mif-format_line_spacing"></span></span>
+                                <span class="caption">Spacing &amp; Sizing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#positioning">
+                                <span class="icon"><span class="mif-compass"></span></span>
+                                <span class="caption">Positioning</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
-                <li class="item-header">Components</li>
-                <li id="li-streamer">
+                <li class="item-header">Widgets</li>
+                <li>
                     <a href="#streamer">
                         <span class="icon"><span class="mif-film"></span></span>
                         <span class="caption">Streamer</span>
                     </a>
                 </li>
-                <li id="li-wizards">
+                <li>
                     <a href="#wizards">
                         <span class="icon"><span class="mif-magic-wand"></span></span>
                         <span class="caption">Wizards</span>
                     </a>
                 </li>
-                <li id="li-chat">
+                <li>
                     <a href="#">
                         <span class="icon"><span class="mif-chat"></span></span>
                         <span class="caption">Chat</span>
                     </a>
                 </li>
-                <li id="li-tabs">
-                    <a href="#">
-                        <span class="icon"><span class="mif-folder-open2"></span></span>
-                        <span class="caption">Tabs &amp; PageControl</span>
+
+                <li class="item-header">Utilities &amp; Libs</li>
+                <li>
+                    <a href="#lib-m4q">
+                        <span class="icon"><span class="mif-dollar2"></span></span>
+                        <span class="caption">M4Q (DOM Querying)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lib-datetime">
+                        <span class="icon"><span class="mif-alarm"></span></span>
+                        <span class="caption">Datetime</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lib-farbe">
+                        <span class="icon"><span class="mif-format_paint"></span></span>
+                        <span class="caption">Farbe</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lib-guardian">
+                        <span class="icon"><span class="mif-user-check"></span></span>
+                        <span class="caption">Guardian</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#lib-string">
+                        <span class="icon"><span class="mif-format_strikethrough_s"></span></span>
+                        <span class="caption">String</span>
                     </a>
                 </li>
 
                 <li class="item-header">Samples Pages</li>
-                <li id="li-signin">
+                <li>
                     <a href="#signin">
                         <span class="icon"><span class="mif-person_add_alt"></span></span>
                         <span class="caption">SignIn &amp; Register</span>
                     </a>
                 </li>
-                <li id="li-errors">
+                <li>
                     <a href="#errors">
-                        <span class="icon"><span class="mif-cancel1"></span></span>
+                        <span class="icon"><span class="mif-error"></span></span>
                         <span class="caption">Errors &amp; Maintains</span>
                     </a>
                 </li>
-                <li id="li-support">
+                <li>
                     <a href="#support">
                         <span class="icon"><span class="mif-support_agent"></span></span>
                         <span class="caption">Support &amp; Help</span>
                     </a>
                 </li>
-                <li id="li-ecommerce">
+                <li>
                     <a href="#ecommerce">
                         <span class="icon"><span class="mif-add-shopping-cart"></span></span>
                         <span class="caption">E-Commerce</span>
                     </a>
                 </li>
-                <li id="li-email">
+                <li>
                     <a href="#email">
                         <span class="icon"><span class="mif-email"></span></span>
                         <span class="caption">Work with Emails</span>
                     </a>
                 </li>
-                <li id="li-multimedia">
+                <li>
                     <a href="#multimedia">
                         <span class="icon"><span class="mif-youtube"></span></span>
                         <span class="caption">Multimedia</span>
@@ -188,7 +341,7 @@
                 </li>
 
                 <li class="item-header mt-auto"></li>
-                <li id="li-information">
+                <li>
                     <a href="#about">
                         <span class="icon"><span class="mif-info1"></span></span>
                         <span class="caption">About</span>
@@ -199,29 +352,28 @@
         </div>
 
         <div class="navview-content">
-            <div class="navview-content-inner">
-                <div data-role="appbar" class="bg-reserve-steppe pos-absolute border-bottom bd-default" data-expand-point="fs">
-                    <div class="app-bar-item-static">
-                        <div class="text-bold enlarge-2" id="content-title">[...]</div>
-                    </div>
-
-                    <div class="app-bar-item-static ml-auto">
-                        <div data-role="clock"></div>
-                    </div>
-                    <div class="app-bar-item-static">
-                        <input type="checkbox" data-role="theme-switcher"/>
-                    </div>
-
+            <div data-role="appbar" class="bg-reserve-steppe pos-absolute border-bottom bd-default" data-expand-point="fs">
+                <div class="app-bar-item-static">
+                    <div class="text-bold enlarge-2" id="content-title">[...]</div>
                 </div>
 
-                <div id="page-content"></div>
+                <div class="app-bar-item-static ml-auto">
+                    <div data-role="clock"></div>
+                </div>
+                <div class="app-bar-item-static">
+                    <input type="checkbox" data-role="theme-switcher"/>
+                </div>
             </div>
+
+            <div id="page-content"></div>
+
         </div>
     </div>
     <script>
         METRO_LIB_INFO = true;
     </script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="/metroui/metro.js"></script>
     <script src="/js/app.js"></script>
 </body>
