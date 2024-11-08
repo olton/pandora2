@@ -18,10 +18,10 @@ class App {
 
         const anchor = this.sidebar.find(`a[href='#${this.currentPage}']`)
         const link = anchor.parent()
-        const parent_menu = anchor.closest("ul[data-role=dropdown]")
+        const parent_menu = anchor.closest("ul[data-role=collapse]")
         link.addClass("active");
         if (parent_menu.length > 0) {
-            Metro.getPlugin(parent_menu, "dropdown").open();
+            Metro.getPlugin(parent_menu, "collapse").expand(true);
         }
     }
 
