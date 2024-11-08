@@ -39,3 +39,14 @@
     padding: 2rem;
 }
 
+.hljs {
+    color: #383a42;
+    background: #fafafa;
+}
+
+.dark-side {
+    .hljs {
+        color: #abb2bf;
+        background: #282c34;
+    }
+}
